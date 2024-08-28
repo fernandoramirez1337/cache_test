@@ -1,0 +1,63 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage[english]{babel}
+\usepackage{algorithmic}
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{cite}
+\usepackage{url}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+  T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{Pruebas sobre el comportamiento de la memoria caché}
+
+
+\author{\IEEEauthorblockN{Fernando Ramirez Arredondo}
+\IEEEauthorblockA{\textit{Computer Science} \\
+\textit{Universidad Católica San Pablo}\\
+Arequipa, Perú \\
+fernando.ramirez@ucsp.edu.pe}}
+
+\maketitle
+
+\begin{abstract}
+\end{abstract}
+
+\begin{IEEEkeywords}
+\end{IEEEkeywords}
+
+\section{Introducción}\label{sec:intro}
+El análisis del rendimiento de algoritmos en términos de su uso de recursos es fundamental en computación. En este informe, se presentará pruebas sobre en comportamiento de la memoria cache mediante la ejecución de tres experimentos, la comparación de bucles anidados, la implementación de la multiplicación de matrices clásica utilizando tres bucles anidados y la implementación de la multiplicación de matrices por bloques, que emplea seis bucles anidados.
+
+La evaluación de las implementaciones se llevará a cabo utilizando diferentes tamaños de matrices para analizar cómo el rendimiento varía con el incremento del tamaño del problema. Se utilizarán las herramientas de análisis de rendimiento Valgrind y KCachegrind para obtener una evaluación detallada en términos de misses de caché.
+
+Sección \ref{sec:meto}. presenta la implementación, 
+Sección \ref{sec:res}. presenta los resultados, 
+Sección \ref{sec:conc}. presenta las conclusiones. 
+
+\section{Implementación}\label{sec:meto}
+La implementación de los experimentos fue realizada en C++ usando una maquina virtual Ubuntu 64-bit Arm 22.04.4 con 4 GB de RAM y gcc version 11.4.0.
+\subsection{Bucles anidados}
+\subsection{Multiplicación de matrices clásica}
+\subsection{Multiplicación de matrices por bloques}
+
+\section{Resultados}\label{sec:res}
+\subsection{Bucles anidados}
+El segundo bucle (j exterior, i interior) cause más errores de caché porque accede a la matriz A en un orden de columna mayor, que es ineficiente en sistemas que almacenan matrices en orden de fila mayor (como en C++). Esto conduce al acceso a ubicaciones de memoria no adyacentes, lo que resulta en más errores de caché.
+\subsection{Multiplicación de matrices clásica}
+\subsection{Multiplicación de matrices por bloques}
+\section{Conclusiones}\label{sec:conc}
+
+\bibliographystyle{IEEEtran}
+\bibliography{bibliography/references}
+\vspace{12pt}
+
+\end{document}
