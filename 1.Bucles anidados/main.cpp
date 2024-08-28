@@ -16,7 +16,6 @@ int main() {
   for (int i = 0; i < MAX; i++) 
     y[i] = 0.0;
 
-  // Start the timer
   auto start = std::chrono::high_resolution_clock::now();
 
   for (int i = 0; i < MAX; i++)
@@ -27,12 +26,10 @@ int main() {
     for (int i = 0; i < MAX; i++)
       y[i] += A[i][j] * x[j];
 
-  // Stop the timer
   auto end = std::chrono::high_resolution_clock::now();
-  std::chrono::duration<double> elapsed = end - start;
+  std::chrono::duration<double> duration = end - start;
 
-  // Print the elapsed time
-  std::cout << "Time: " << elapsed.count() << " seconds" << std::endl;
+  std::cout << "Tiempo de ejecución: " << duration.count() << " segundos" << std::endl;
 
   return 0;
 }
