@@ -1,0 +1,3 @@
+/Users/99/202402/Computacion Paralela y Distribuida/Pruebas sobre el comportamiento de la memoria caché/02/build/CMakeFiles/matrixTest01.dir
+/Users/99/202402/Computacion Paralela y Distribuida/Pruebas sobre el comportamiento de la memoria caché/02/build/CMakeFiles/edit_cache.dir
+/Users/99/202402/Computacion Paralela y Distribuida/Pruebas sobre el comportamiento de la memoria caché/02/build/CMakeFiles/rebuild_cache.dir
